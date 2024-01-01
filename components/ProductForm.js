@@ -106,13 +106,15 @@ export default function ProductForm({
                 onChange={ev => setCategory(ev.target.value)}>
           <option value="">Uncategorized</option>
           {categories.length > 0 && categories.map(c => (
-            <option value={c._id}>{c.name}</option>
+              // eslint-disable-next-line react/jsx-key
+            <option key={c._id} value={c._id}>{c.name}</option>
           ))}
         </select>
         {categoriesLoading && (
           <Spinner />
         )}
         {propertiesToFill.length > 0 && propertiesToFill.map(p => (
+            // eslint-disable-next-line react/jsx-key
           <div className="">
             <label>{p.name[0].toUpperCase()+p.name.substring(1)}</label>
             <div>
@@ -122,6 +124,7 @@ export default function ProductForm({
                       }
               >
                 {p.values.map(v => (
+                    // eslint-disable-next-line react/jsx-key
                   <option value={v}>{v}</option>
                 ))}
               </select>

@@ -57,7 +57,8 @@ function SettingsPage({swal}) {
           <label>Featured product</label>
           <select value={featuredProductId} onChange={ev => setFeaturedProductId(ev.target.value)}>
             {products.length > 0 && products.map(product => (
-              <option value={product._id}>{product.title}</option>
+                // eslint-disable-next-line react/jsx-key
+              <option key={product._id} value={product._id}>{product.title}</option>
             ))}
           </select>
           <label>Shipping price (in usd)</label>
