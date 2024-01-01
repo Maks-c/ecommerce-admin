@@ -126,7 +126,6 @@ function Categories({swal}){
                         value={parentCategory}>
                         <option value="">No parent category</option>
                         {categories.length > 0 && categories.map(category => (
-                            // eslint-disable-next-line react/jsx-key
                             <option key={category._id} value={category._id}>{category.name}</option>
                         ))}
                     </select>
@@ -202,7 +201,6 @@ function Categories({swal}){
                         </tr>
                     )}
                     {categories.length > 0 && categories.map(category => (
-                        // eslint-disable-next-line react/jsx-key
                         <tr key={category._id}>
                             <td>{category.name}</td>
                             <td>{category?.parent?.name}</td>

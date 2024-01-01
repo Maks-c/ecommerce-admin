@@ -36,7 +36,6 @@ export default function OrdersPage(){
                     </tr>
                 )}
                 {orders.length > 0 && orders.map(order => (
-                    // eslint-disable-next-line react/jsx-key
                     <tr key={order._id}>
                         <td>{(new Date(order.createdAt)).toLocaleString()}
                         </td>

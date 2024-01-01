@@ -102,7 +102,6 @@ function AdminsPage({swal}){
                     </tr>
                 )}
                 {adminEmails.length > 0 && adminEmails.map(adminEmail => (
-                    // eslint-disable-next-line react/jsx-key
                     <tr key={adminEmail._id}>
                         <td>{adminEmail.email}</td>
                         <td>
