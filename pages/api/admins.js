@@ -1,6 +1,6 @@
 import {mongooseConnect} from "../../lib/mongoose";
 import {isAdminRequest} from "./auth/[...nextauth]";
-import {Admin} from "/models/admin";
+import {Admin} from "../../models/admin";
 
 export default async function handle(req, res){
     await mongooseConnect();
