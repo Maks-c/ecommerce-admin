@@ -23,7 +23,6 @@ export default function HomeStats(){
                 sum += lineSum;
             });
         });
-        console.log({orders});
         return new Intl.NumberFormat('sv-SE').format(sum);
     }
 

@@ -13,6 +13,7 @@ export default function OrdersPage(){
             setIsLoading(false);
         });
     }, []);
+
     return (
         <Layout>
             <h1>Orders</h1>

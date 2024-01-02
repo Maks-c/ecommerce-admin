@@ -6,7 +6,8 @@ import {Admin} from "/models/Admin";
 import {mongooseConnect} from "../../../lib/mongoose";
 
 async function isAdminEmail(email){
-    mongooseConnect();
+
+    await mongooseConnect();
     return !!(await Admin.findOne({email}));
 }
 
@@ -32,6 +33,7 @@ export const authOptions = {
 export default NextAuth(authOptions);
 
 export async function isAdminRequest(req, res){
+
     const session = await getServerSession(req, res, authOptions);
     if( !(await isAdminEmail(session?.user?.email))) {
         res.status(401);
