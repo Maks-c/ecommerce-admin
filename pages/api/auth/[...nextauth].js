@@ -12,7 +12,7 @@ async function isAdminEmail(email){
 }
 
 export const authOptions = {
-    secret: 'h2k34gbsdfijshdf08974i23kjbsdkbkshj',
+    secret: process.env.SECRET,
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_ID,
